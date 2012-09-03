@@ -1,333 +1,464 @@
 <!doctype html>  
 <html lang="en">
-	
-	<head>
-		<meta charset="utf-8">
-		
-		<title>reveal.js - HTML5 Presentations</title>
-
-		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
-		<meta name="author" content="Hakim El Hattab">
-
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-		
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/main.css">
-		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
-
-		<link rel="stylesheet" href="lib/css/zenburn.css">
-	</head>
-	
-	<body>
-		
-		<div class="reveal">
-
-			<!-- Used to fade in a background when a specific slide state is reached -->
-			<div class="state-background"></div>
-			
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3 class="inverted">CSS 3D Presentations</h3>
-					<script>
-						// Delicously hacky. Look away.
-						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
-					</script>
-				</section>
-				
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is an easy to use, HTML based, presentation tool. You'll need a modern browser with 
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-					<p>
-						<i><small>- <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small></i>
-					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you run the speaker notes server.
-					</aside>
-				</section>
-				
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,<br/>
-							try pressing <a href="#/2/1">down</a>.
-						</p>
-						<a href="#/2/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Holistic Overview</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview!
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-				
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section data-markdown>
-					## Markdown support
-					
-					For those of you who like that sort of thing.  
-                    Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-					<pre><code contenteditable style="margin-top: 20px;">&lt;section data-markdown&gt;
-  ## Markdown support
-
-  For those of you who like that sort of thing. 
-  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-&lt;/section&gt;
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like:
-					</p>
-					<ul>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=cube">Cube</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=page">Page</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=concave">Concave</a></li>
-						<li><a href="http://lab.hakim.se/reveal-js/?transition=linear">Linear</a></li>
-					</ul>
-				</section>
-
-				<section>
-					<section data-state="alert">
-						<h2>Global State</h2>
-						<p>
-							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-							will be added as a class to the document element when the slide is open. This let's you
-							apply broader style changes, like switching the background.
-						</p>
-						<a href="#/7/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section data-state="blackout">
-						<h2>"blackout"</h2>
-						<a href="#/7/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						</a>
-					</section>
-					<section data-state="soothe">
-						<h2>"soothe"</h2>
-						<a href="#/7/0" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would 
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-					</blockquote>
-				</section>
-				
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+  
+  <head>
+    <meta charset="utf-8">
     
-    var nodes = document.querySelectorAll( selector );
+    <title>Open Data - Hyper Island DDS</title>
 
-    for( var i = 0, len = nodes.length; i < len; i++ ) {
-      var node = nodes[i];
+    <meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
+    <meta name="author" content="Hakim El Hattab">
 
-      if( !node.className ) ) {
-        node.className += ' roll';
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+  </head>
+  
+  <body>
+    <!--
+    Hey! I just met you
+    And this is crazy
+    Some here's some data
+    So map it maybe?
+
+    If it's hard to come by
+    In your citttttay
+    Then run a hackfest
+    But don't make it shitty.
+    -->
+
+    <div class="reveal">
+
+      <!-- Used to fade in a background when a specific slide state is reached -->
+      <div class="state-background"></div>
+      
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h1>Open Data</h1>
+          <h3 class="inverted">Hyper Island Edition</h3>
+        </section>
+
+        <section>
+          <h3>Objectives for this week</h3>
+          <ul>
+            <li class="fragment">Find/use data</li>
+            <li class="fragment">Convince others that releasing data is a good idea</li>
+            <li class="fragment">Persuade others based on data</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Edward Ocampo-Gooding</h3>
+          <img src="images/edward.jpeg"></img>
+        </section>
+
+        <section>
+          <h3>Daniel Beauchamp</h3>
+          <img src="images/daniel.jpeg"></img>
+        </section>
+
+        <section>
+          <h3>Canada, eh?</h3>
+          <img width="700" src="images/canada.gif"></img>
+        </section>
+
+        <section>
+          <h3>Ottawa</h3>
+          <img src="images/ottawa.jpeg"></img>
+          <!-- Courtesy of http://i1.focus.ua/img/a/9/2/139829.jpg -->
+        </section>
+
+        <section>
+          <h3>Lumberjacks</h3>
+          <img src="images/lumberjack.jpeg"></img>
+        </section>
+
+        <section>
+          <h3>Beavers</h3>
+          <img src="images/beaver.jpeg"></img>
+          <!-- Courtesy of http://elizabethirreverent.files.wordpress.com/2011/06/beaver-preening.jpg -->
+        </section>
+
+        <section>
+          <h3>Maple Syrup</h3>
+          <img src="images/pancake.jpeg"></img>
+          <!-- Courtesy of http://1.bp.blogspot.com/_FH8Uo9eN3pw/S3hEuGqixwI/AAAAAAAAALY/A6FQjLJOZtQ/s400/pancakes%2B028.jpg -->
+        </section>
+
+        <section>
+          <h3>Horrible Summer Olympics Performance</h3>
+          <img src="images/medal1.png"></img>
+          <div class='fragment'>
+            </br>
+            <h3>But still better than Sweden's...</h3>
+            <img src="images/medal2.png"></img>
+          </div>
+        </section>
+
+        <section>
+          <img src="images/shopify.png" class="no-border"></img>
+        </section>
+
+        <section>
+          <h3>Open Data Ottawa</h3>
+          <img height="200" src="images/logo.png"></img>
+        </section>
+
+        <section>
+          <h1>Open Data</h1>
+          <h3 class="fragment">WTF?</h3>
+        </section>
+
+        <section>
+          <h1>Who are you?</h1>
+          <h3>And what do you think Open Data is?</h3>
+        </section>
+
+        <section>
+          <h3><a href="http://live.transloc.com/" target="_blank">http://live.transloc.com/</a></h3>
+          <img src="images/transloc.png" />
+        </section>
+
+        <section>
+          <h3>Open Data is...</h3>
+          <br/>
+          <h2 class='fragment'>Freely Accessible</h2>
+          <div class='fragment'>
+            <h2>And</h2>
+            <h2>Machine Readable</h2>
+          </div>
+          <h3 class="fragment">(and free to distribute/modify)</h3>
+        </section>
+
+        <section>
+          <h3>Mmmm...raw data</h3>
+          <img src="images/raw.png"></img>
+        </section>
+
+        <section>
+          <h3>Mmmm...raw data on a map</h3>
+          <img src="images/watermap.png"></img>
+        </section>
+
+        <section>
+          <h3><a href="http://ottawatrash.ca" target="_blank">Ottawatrash.ca</a></h3>
+          <img src="images/trash.png"></img>
+        </section>
+
+        <section>
+          <h3>Stumble safely</h3>
+          <img height="500" src="images/stumble.jpeg"></img>
+        </section>
+
+        <section>
+          <h3><a href="http://parkfinder.ottawadogblog.ca/" target="_blank">Dog park finder</a></h3>
+          <img src="images/dog.png"></img>
+        </section>
+
+        <section>
+          <h3><a href="http://ffctn.com/a/expensevisualizer/" target="_blank">Expense Visualizer</a></h3>
+          <img src="images/expenses.png"></img>
+        </section>
+
+        <section>
+          <h3><a href="http://proracunskikalkulator.com/" target="_blank">Proracunski Kalkulator</a></h3>
+          <img src="images/kalkulator.png"></img>
+          <h4>(Does anyone here know Croatian?)</h4>
+        </section>
+
+        <section>
+          <h3><a href="http://vanderlin.cc/projects/mbta_visualizations" target="_blank">MBTA Visualizations</a></h3>
+          <section>
+            <img src="images/mbta1.png"></img>
+          </section>
+          <section>
+            <img src="images/mbta2.jpeg"></img>
+          </section>
+          <section>
+            <img src="images/mbta3.jpeg"></img>
+          </section>
+        </section>
+
+        <section>
+          <h1>Music?</h1>
+          <h3>Why not?</h3>
+        </section>
+
+        <section>
+          <section>
+            <h1>Where is this data?</h1>
+          </section>
+          <section>
+            <h2><a href="http://data.vancouver.ca/datacatalogue/index.htm" target="_blank">Cities</a></h2>
+            <a href="http://data.vancouver.ca/datacatalogue/index.htm" target="_blank"><img src="images/portal.png"></img></a>
+          </section>
+          <section>
+            <h2><a href="http://data.gov.uk/data" target="_blank">National Governments</a></h2>
+            <a href="http://data.gov.uk/data" target="_blank"><img src="images/federal.png"></img></a>
+          </section>
+          <section>
+            <h2><a href="http://data.gov.uk/data" target="_blank">Corporations</a></h2>
+            <a href="http://data.gov.uk/data" target="_blank"><img src="images/federal.png"></img></a>
+          </section>
+          <section>
+            <h2><a href="http://data.worldbank.org/topic" target="_blank">Intl' Organizations</a></h2>
+            <a href="http://data.worldbank.org/topic" target="_blank"><img src="images/worldbank.png"></img></a>
+          </section>
+          <section>
+            <h2><a href="http://www-958.ibm.com/software/data/cognos/manyeyes/datasets/the-characteristics-of-my-familys-so/versions/1" target="_blank">Citizens</a></h2>
+            <a href="http://www-958.ibm.com/software/data/cognos/manyeyes/datasets/the-characteristics-of-my-familys-so/versions/1" target="_blank"><img src="images/citizens.png"></img></a>
+          </section>
+        </section>
+
+        <section>
+          <h1>How about in Ottawa?</h1>
+        </section>
+
+        <section>
+          <section>
+            <h1>Run a Hackfest</h1>
+          </section>
+          <section>
+            <img width="808" height="542" src="images/hack.png"></src>
+          </section>
+
+          <section>
+            <img width="808" height="542" src="images/hack1.png"></src>
+          </section>
+  
+          <section>
+            <img width="808" height="542" src="images/hack2.png"></src>
+          </section>
+  
+          <section>
+            <img width="808" height="542" src="images/hack3.png"></src>
+          </section>
+  
+          <section>
+            <img width="808" height="542" src="images/cio.png"></src>
+          </section>
+
+        </section>
+
+        <section>
+          <h2>Why do cities release data?</h2>
+          <h3>Let's discuss</h3>
+        </section>
+
+        <section>
+
+          <section>
+            <h2>Why do companies release data?</h2>
+            <h3>Let's discuss</h3>
+          </section>
+          <section>
+            <h2>Case study: <a href="http://www.ideaconnection.com/open-innovation-success/Open-Innovation-Goldcorp-Challenge-00031.html" target="_blank"><img src="images/goldcorp.jpeg"></img></a></h2>
+            <ul style="font-size: 26px">
+              <li class="fragment">Underperforming mine in Ontario, Canada. Cost of acquiring an oz. of gold = $360, and the annual production ate is 53,000 oz.</li>
+              <li class="fragment">Goldcorp releases geographic data about the mine, and hold a $500K contest for people to find gold</li>
+              <li class="fragment">The winner is a company in Australia. Of the top 5 locations they found, Goldcorp struck gold at 4 of them.</li>
+              <li class="fragment">Now the mine produces gold at $59 an ounce, and it produces 504,000 oz. a year.</li>
+            </ul>
+            <h4 class="fragment"><a href="http://www.fastcompany.com/44917/he-struck-gold-net-really" target="_blank">(http://www.fastcompany.com/44917/he-struck-gold-net-really)</a></h4>
+          </section>
+
+          <section>
+            <h2><a href="http://kaggle.com" target="_blank">Case study: Kaggle</a></h2>
+            <iframe width="560" height="315" src="http://www.youtube.com/embed/PoD84TVdD-4" frameborder="0" allowfullscreen></iframe>
+          </section>
+        </section>
+
+        <section>
+          <h2>Dangers of Open Data</h2>
+          <h3>Let's discuss</h3>
+          <img height="400" src="images/scream.jpeg"></img>
+        </section>
+
+        <section>
+          <h3>Objectives for this week</h3>
+          <ul>
+            <li>Find/use data</li>
+            <li>Convince others that releasing data is a good idea</li>
+            <li>Persuade others based on data</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Objectives for this week</h3>
+          <ul>
+            <li>Find/use Open Data</li>
+            <li>Convince others that Open Data is a good idea</li>
+            <li>Persuade others based on Open Data</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Monday</h1>
+          <section>
+          <h3>Imagine that data is available in the format you want.</h3>
+          </section>
+          <section>
+          <h3>Let's find & explore cool datasets.</h3>
+          </section>
+          <section>
+          <h3>Let's learn about how to visualize/use the data.</h3>
+          </section>
+        </section>
+
+        <section data-state="light2">
+          <h1>Tuesday</h1>
+          <section>
+          <h3>Imagine that data is available, but NOT in the format you want.</h3>
+          </section>
+          <section>
+          <h3>Let's seek help from Zarino Zappia of ScraperWiki</h3>
+          </section>
+          <section>
+          <h3>He'll teach us how to convert data into more usable forms.</h3>
+          </section>
+          <section>
+          <h3>He'll make sure we get our hands dirty with code.</h3>
+          </section>
+          <section>
+          <h3>He'll show us more visualization tools.</h3>
+          </section>
+          <section>
+          <h3>Hooray!.</h3>
+          </section>
+        </section>
+
+        <section data-state="light3">
+          <h1>Wednesday</h1>
+          <section>
+          <h3>Imagine that data is NOT available.</h3>
+          </section>
+          <section>
+          <h3>Uh oh...</h3>
+          </section>
+          <section>
+          <h3>Hey! I have an idea...</h3>
+          </section>
+          <section>
+          <h3>Let's create the datasets ourselves!</h3>
+          </section>
+        </section>
+
+        <section data-state="light4">
+          <h1>Thursday</h1>
+          <section>
+          <h3>Let's have a giant party!</h3>
+          </section>
+          <section>
+          <h3>I mean...hackfest</h3>
+          </section>
+        </section>
+
+        <section data-state="light5">
+          <h1>Friday</h1>
+          <section>
+            <h3>Hangover recovery? (just kidding)</h3>
+          </section>
+          <section>
+            <h3>Let's reflect on what we've learnt this week</h3>
+          </section>
+        </section>
+
+        <section>
+          <h1>Let's get started</h1>
+          <h2>And find some juicy data sets</h2>
+        </section>
+
+         <section>
+          <h2>Good places to start:</h2>
+          <h3>http://opengovernmentdata.org/data/map/</h3>
+          <h3>http://open.stockholm.se/oppna-data</h3>
+        </section>
+
+        <section>
+          <h1>Google Fusion Tables</h1>
+        </section>
+
+        <section>
+          <h1>Homework</h1>
+          <ul>
+            <li></li>
+          </ul>
+        </section>
+      </div>
+
+
+
+      <!-- The navigational controls UI -->
+      <aside class="controls">
+        <a class="left" href="#">&#x25C4;</a>
+        <a class="right" href="#">&#x25BA;</a>
+        <a class="up" href="#">&#x25B2;</a>
+        <a class="down" href="#">&#x25BC;</a>
+      </aside>
+
+      <!-- Presentation progress bar -->
+      <div class="progress"><span></span></div>
+      
+
+    <script src="lib/js/head.min.js"></script>
+
+    <script>
+      // Scripts that should be loaded before initializing
+      var scripts = [];
+
+      // If the browser doesn't support classList, load a polyfill
+      if( !document.body.classList ) {
+        scripts.push( 'lib/js/classList.js' );
       }
-    };
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-				
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,<br/>
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
 
-				<section>
-					<h2>Fragmented Views</h2>
-					<p>Hit the next arrow...</p>
-					<p class="fragment">... to step through ...</p>
-					<ol>
-						<li class="fragment"><code>any type</code></li>
-						<li class="fragment"><em>of view</em></li>
-						<li class="fragment"><strong>fragments</strong></li>
-					</ol>
-				</section>
-				
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://hakim.se/experiments/html5/breakdom/" target="_blank">
-						<img width="320" height="412" src="https://s3.amazonaws.com/hakim-static/reveal-js/breakdom.png">
-					</a>
-				</section>
-				
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on github</a></li>
-						<li><a href="http://hakim.se/projects/reveal-js">Read more on my site</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
-				
-				<section>
-					<h1>THE END</h1>
-					<h3 class="inverted">BY Hakim El Hattab / hakim.se</h3>
-				</section>
-			</div>
+      // Load markdown parser if there are slides defined using markdown
+      if( document.querySelector( '[data-markdown]' ) ) {
+        scripts.push( 'lib/js/showdown.js' );
+        scripts.push( 'lib/js/data-markdown.js' );
+      }
 
-			<!-- The navigational controls UI -->
-			<aside class="controls">
-				<a class="left" href="#">&#x25C4;</a>
-				<a class="right" href="#">&#x25BA;</a>
-				<a class="up" href="#">&#x25B2;</a>
-				<a class="down" href="#">&#x25BC;</a>
-			</aside>
+      scripts.push( 'js/reveal.js' );
 
-			<!-- Presentation progress bar -->
-			<div class="progress"><span></span></div>
-			
-		</div>
+      // Load the scripts and, when completed, initialize reveal.js
+      head.js.apply( null, scripts.concat([function() {
 
-		<script src="lib/js/head.min.js"></script>
+        // Fires when a slide with data-state=customevent is activated
+        Reveal.addEventListener( 'customevent', function() {
+          console.log( '"customevent" has fired' );
+        } );
 
-		<script>
-			// Scripts that should be loaded before initializing
-			var scripts = [];
+        // Fires each time a new slide is activated
+        Reveal.addEventListener( 'slidechanged', function( event ) {
+          // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+        } );
 
-			// If the browser doesn't support classList, load a polyfill
-			if( !document.body.classList ) {
-				scripts.push( 'lib/js/classList.js' );
-			}
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+          progress: true,
+          history: true,
+          mousewheel: false,
+          rollingLinks: false,
+          
+          theme: 'beige', // default/neon/beige
+          transition: 'linear' // default/cube/page/concave/linear(2d)
+        });
 
-			// Load markdown parser if there are slides defined using markdown
-			if( document.querySelector( '[data-markdown]' ) ) {
-				scripts.push( 'lib/js/showdown.js' );
-				scripts.push( 'lib/js/data-markdown.js' );
-			}
+      }]));
+      
+      // Load highlight.js for syntax highlighting of code samples
+      head.js( 'lib/js/highlight.js', function() { 
+        hljs.initHighlightingOnLoad(); 
+      } );
+    </script>
 
-			// If we're runnning the notes server we need to include some additional JS
-			// TODO Is there a better way to determine if we're running the notes server?
-			if( window.location.host === 'localhost:1947' ) {
-				scripts.push( 'socket.io/socket.io.js' );
-				scripts.push( 'plugin/speakernotes/client.js' );
-			}
-
-			scripts.push( 'js/reveal.js' );
-
-			// Load the scripts and, when completed, initialize reveal.js
-			head.js.apply( null, scripts.concat([function() {
-
-				// Fires when a slide with data-state=customevent is activated
-				Reveal.addEventListener( 'customevent', function() {
-					console.log( '"customevent" has fired' );
-				} );
-
-				// Fires each time a new slide is activated
-				Reveal.addEventListener( 'slidechanged', function( event ) {
-					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
-				} );
-
-				// Full list of configuration options available here:
-				// https://github.com/hakimel/reveal.js#configuration
-				Reveal.initialize({
-					controls: true,
-					progress: true,
-					history: true,
-					
-					theme: Reveal.getQueryHash().theme || 'default', // default/neon/beige
-					transition: Reveal.getQueryHash().transition || 'default' // default/cube/page/concave/linear(2d)
-				});
-
-			}]));
-			
-			// Load highlight.js for syntax highlighting of code samples
-			head.js( 'lib/js/highlight.js', function() { 
-				hljs.initHighlightingOnLoad(); 
-			} );
-		</script>
-
-	</body>
+  </body>
 </html>

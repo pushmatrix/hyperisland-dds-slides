@@ -37,7 +37,7 @@ body {
 	overflow: hidden;
 	
 	font-family: 'Lato', Times, 'Times New Roman', serif;
-	font-size: 36px;
+	font-size: 50px;
 	font-weight: 200;
 	letter-spacing: -0.02em;
 	color: #eee;
@@ -71,8 +71,8 @@ body {
 	text-shadow: 0px 0px 6px rgba(0,0,0,0.2);
 }
 
-.reveal h1 { font-size: 136px; 	}
-.reveal h2 { font-size: 76px;	}
+.reveal h1 { font-size: 220px; 	}
+.reveal h2 { font-size: 100px;	}
 .reveal h3 { font-size: 56px;	}
 .reveal h4 { font-size: 36px;	}
 
@@ -940,9 +940,32 @@ body {
 	background: rgba( 50, 200, 90, 0.4 );
 }
 .blackout .state-background {
-	background: rgba( 0, 0, 0, 0.6 );
+	background: rgba( 0, 0, 0, 0.8 );
 }
 
+.navy .state-background {
+	background: rgba( 0, 0, 20, 0.6 );
+}
+
+.light1 .state-background {
+	background: rgba( 0, 0, 20, 0.1 );
+}
+
+.light2 .state-background {
+	background: rgba( 0, 0, 20, 0.2 );
+}
+
+.light3 .state-background {
+	background: rgba( 0, 0, 20, 0.3 );
+}
+
+.light4 .state-background {
+	background: rgba( 0, 0, 20, 0.4 );
+}
+
+.light5 .state-background {
+	background: rgba( 0, 0, 20, 0.5 );
+}
 
 /*********************************************
  * SPEAKER NOTES
@@ -974,19 +997,20 @@ body {
 
 
 /*********************************************
- * BEIGE THEME
+ * BLUE THEME
  *********************************************/
 
 .theme-beige body {
-	color: #333;
+	color: #fff;
 
-	background: #f7f3de;
-	background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(247,242,211,1) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(247,242,211,1)));
-	background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(247,242,211,1) 100%);
-	background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(247,242,211,1) 100%);
-	background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(247,242,211,1) 100%);
-	background: radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(247,242,211,1) 100%);
+	background: #93cede;
+	background: -moz-radial-gradient(center, ellipse cover, #93cede 0%, #75bdd1 41%, #49a5bf 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#93cede), color-stop(41%,#75bdd1), color-stop(100%,#49a5bf)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover, #93cede 0%,#75bdd1 41%,#49a5bf 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover, #93cede 0%,#75bdd1 41%,#49a5bf 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover, #93cede 0%,#75bdd1 41%,#49a5bf 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center, #93cede 0%,#75bdd1 41%,#49a5bf 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 .theme-beige .reveal h1,
@@ -995,21 +1019,36 @@ body {
 .theme-beige .reveal h4,
 .theme-beige .reveal h5,
 .theme-beige .reveal h6 {
-	color: #333;
+	color: #FFF;
 	text-shadow: none;
 }
 
 .theme-beige .reveal a,
 .theme-beige .reveal a:hover,
 .theme-beige .reveal .controls a.enabled {
-	color: #8b743d;
+	color: #fff;
 }
 
 .theme-beige .reveal .progress span,
 .theme-beige .reveal .roll span:after {
-	background: #8b743d;
+	background: #FFF;
 }
 
 .theme-beige .reveal a.image:hover img {
 	border-color: #8b743d;
 }
+
+img.no-border {
+	border: none !important;
+	background: none !important;
+	-webkit-box-shadow: none !important;
+	   -moz-box-shadow: none !important;
+	        box-shadow: none !important;
+
+}
+
+img {
+	max-height: 500px;
+}
+
+
